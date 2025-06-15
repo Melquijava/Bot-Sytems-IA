@@ -1,0 +1,35 @@
+# Arquivos de ambiente
+.env
+
+# Bytecode do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Cache de pacotes
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Diretórios de IDEs
+.vscode/
+.idea/
+
+# Arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+
+# Virtualenvs
+venv/
+env/
+.venv/
+
+# Banco de dados temporários
+*.sqlite3
+
+# Arquivos de saída
+*.zip
+*.tar.gz
+
+# Railway (caso use CLI de deploy)
+.railway/

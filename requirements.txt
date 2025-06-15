@@ -1,0 +1,5 @@
+discord.py==2.3.2
+python-dotenv
+apscheduler
+openai>=1.0.0
+requests
