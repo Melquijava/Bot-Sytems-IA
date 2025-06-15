@@ -3,17 +3,18 @@ from discord.ext import commands
 import os
 from openai import OpenAI
 
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
 class IA(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY")) 
 
     @commands.command(name="pergunta")
     async def pergunta(self, ctx, *, texto):
         await ctx.send("⏳ O Systems IA está processando sua pergunta, aguarde...", delete_after=10)
 
         try:
-            completion = self.client.chat.completions.create(
+            completion = client.chat.completions.create(
                 model="gpt-4o",
                 messages=[
                     {"role": "system", "content": "Você é um profissional educado e direto, seu maior foco é responder perguntas sobre programação e hacker ético."},
@@ -28,7 +29,9 @@ class IA(commands.Cog):
 
         except Exception as e:
             await ctx.send("❌ Erro ao consultar a OpenAI. Verifique o token ou limite da API.", delete_after=10)
-            print(f"[ERRO OPENAI]: {e}")
+            import traceback
+            traceback.print_exc()
 
 async def setup(bot):
     await bot.add_cog(IA(bot))
+    
