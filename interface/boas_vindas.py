@@ -28,7 +28,11 @@ class BoasVindas(commands.Cog):
     async def on_member_remove(self, member):
         canal = self.bot.get_channel(CANAL_SAIDA_ID)
         if canal:
-            await canal.send(f"⚠️ O membro `{member.name}` saiu do servidor.")
+            await canal.send(
+    f"⚠️ O membro `{member.name}` saiu do servidor.\n"
+    f"🆔 ID do usuário: `{member.id}`"
+)
 
 async def setup(bot):
     await bot.add_cog(BoasVindas(bot))
+    
