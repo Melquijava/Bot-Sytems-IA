@@ -20,6 +20,7 @@ EXTENSIONS = [
     "comandos.educacionais",
     "tasks.mensagem_periodica",
     "interface.painel",
+    "interface.boas_vindas",
     "comandos.comandos_extras",
     "comandos.ia",
 ]
