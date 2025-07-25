@@ -26,22 +26,24 @@ class PainelInterativoView(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=None)
 
-    @discord.ui.button(label="📚 Ver Comandos", style=discord.ButtonStyle.primary, custom_id="ver_comandos")
+    @discord.ui.button(label="📘 Ver Comandos", style=discord.ButtonStyle.primary, custom_id="ver_comandos")
     async def ver_comandos(self, interaction: discord.Interaction, button: discord.ui.Button):
         await interaction.response.send_message(
-            "**📘 Comandos disponíveis:**\n"
-            "🔹 `!aula` – Aula gratuita de TI\n"
-            "🔹 `!quiz` – Quiz interativo\n"
-            "🔹 `!pergunta <texto>` – IA responde sua dúvida\n"
-            "🔹 `!dica` – Dica aleatória de tecnologia\n"
-            "🔹 `!desafio` – Desafio técnico diário\n"
-            "🔹 `!perfil` – Ver seus links GitHub/LinkedIn\n"
-            "🔹 `!setgithub` / `!setlinkedin` – Cadastrar seus links\n"
-            "🔹 `!programacao` – Recomenda canais de programação\n"
-            "🔹 `!hacking` – Recomenda canais de hacking ético\n"
-            "🔹 `!prompts-ia` – Recomenda canais de IA e prompts",
+            "**📌 Comandos disponíveis:**\n"
+            "• `!quiz` – Quiz interativo\n"
+            "• `!pergunta <texto>` – IA responde sua dúvida\n"
+            "• `!dica` – Dica aleatória de tecnologia\n"
+            "• `!desafio` – Desafio técnico diário\n"
+            "• `!perfil` – Ver seus links GitHub/LinkedIn\n"
+            "• `!setgithub` / `!setlinkedin` – Cadastrar seus links\n"
+            "• `!programacao` – Recomenda canais de programação\n"
+            "• `!hacking` – Recomenda canais de hacking ético\n"
+            "• `!prompts-ia` – Recomenda canais de IA e prompts\n"
+            "• `!aula_programacao` – Aula aleatória de programação\n"
+            "• `!aula_hacking` – Aula aleatória de hacking/cibersegurança",
             ephemeral=True
-        )
+    )
+
         
     @discord.ui.button(label="📞 Suporte", style=discord.ButtonStyle.danger, custom_id="suporte")
     async def suporte(self, interaction: discord.Interaction, button: discord.ui.Button):
