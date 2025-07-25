@@ -8,37 +8,37 @@ class Educacionais(commands.Cog):
         self.resposta_certa = None 
         
 
-@commands.command(name="aula_programacao")
-async def aula_programacao(self, ctx):
-    aulas_programacao = [
-        "💻 [Curso básico de Python – Curso em Vídeo](https://www.youtube.com/watch?v=S9uPNppGsGo)",
-        "📘 [Banco de Dados para Iniciantes – Bóson Treinamentos](https://www.youtube.com/watch?v=Ofktstne-utM)",
-        "🌐 [HTML + CSS do Zero – Danki Code](https://www.youtube.com/watch?v=3oSIqIq3N3M)",
-        "⚙️ [Git e GitHub do Zero – Curso em Vídeo](https://www.youtube.com/watch?v=xEKo29OWILE)",
-        "📙 [Curso de Lógica de Programação – Curso em Vídeo](https://www.youtube.com/watch?v=UmmTf6_4tJk)",
-        "🧠 [Curso de Python com Projetos – Hashtag](https://www.youtube.com/watch?v=QSZC7X5tqNQ)",
-        "📚 [Curso de Algoritmos – Curso em Vídeo](https://www.youtube.com/watch?v=5oC6avFCxnU)",
-        "🌍 [HTML5 Completo – CFBCursos](https://www.youtube.com/watch?v=nPEaPFt1ykI)",
-        "🎨 [CSS3 Completo – CFBCursos](https://www.youtube.com/watch?v=1-w1RfGJov4)",
-        "📗 [SQL para Iniciantes – Bóson](https://www.youtube.com/watch?v=HtSuA80QTyo)",
-        "📜 [Curso de Shell Script – Bóson](https://www.youtube.com/watch?v=9mAM2ly92lc)"
-    ]
-    await ctx.send(f"Aqui vai uma aula de **programação** pra você estudar hoje, salve o link pois essa mensagem será apagada em 30 segundos!\n{random.choice(aulas_programacao)}", delete_after=30)
+    @commands.command(name="aula_programacao")
+    async def aula_programacao(self, ctx):
+        aulas_programacao = [
+            "💻 [Curso básico de Python – Curso em Vídeo](https://www.youtube.com/watch?v=S9uPNppGsGo)",
+            "📘 [Banco de Dados para Iniciantes – Bóson Treinamentos](https://www.youtube.com/watch?v=Ofktstne-utM)",
+            "🌐 [HTML + CSS do Zero – Danki Code](https://www.youtube.com/watch?v=3oSIqIq3N3M)",
+            "⚙️ [Git e GitHub do Zero – Curso em Vídeo](https://www.youtube.com/watch?v=xEKo29OWILE)",
+            "📙 [Curso de Lógica de Programação – Curso em Vídeo](https://www.youtube.com/watch?v=UmmTf6_4tJk)",
+            "🧠 [Curso de Python com Projetos – Hashtag](https://www.youtube.com/watch?v=QSZC7X5tqNQ)",
+            "📚 [Curso de Algoritmos – Curso em Vídeo](https://www.youtube.com/watch?v=5oC6avFCxnU)",
+            "🌍 [HTML5 Completo – CFBCursos](https://www.youtube.com/watch?v=nPEaPFt1ykI)",
+            "🎨 [CSS3 Completo – CFBCursos](https://www.youtube.com/watch?v=1-w1RfGJov4)",
+            "📗 [SQL para Iniciantes – Bóson](https://www.youtube.com/watch?v=HtSuA80QTyo)",
+            "📜 [Curso de Shell Script – Bóson](https://www.youtube.com/watch?v=9mAM2ly92lc)"
+        ]
+        await ctx.send(f"Aqui vai uma aula de **programação** pra você estudar hoje, salve o link pois essa mensagem será apagada em 30 segundos!\n{random.choice(aulas_programacao)}", delete_after=30)
 
 
-@commands.command(name="aula_hacking")
-async def aula_hacking(self, ctx):
-    aulas_hacking = [
-        "🛡️ [Introdução à Cibersegurança – Cisco NetAcad](https://www.netacad.com/pt-br/courses/cybersecurity/introduction-cybersecurity)",
-        "🔒 [Hack The Box Academy (Lab Free)](https://academy.hackthebox.com/)",
-        "🧩 [Criptografia – Bóson Treinamentos](https://www.youtube.com/watch?v=EpLMKrN9UE0)",
-        "🔐 [Power BI para Iniciantes – Hashtag Treinamentos](https://www.youtube.com/watch?v=CMY1dzMo6o)",  # não é hacking puro, mas pode ser mantido
-        "🔧 [Redes TCP/IP para Iniciantes – Curso Gratuito](https://www.youtube.com/watch?v=uyM2ZL5jg88)",
-        "🌐 [Redes de Computadores – Curso Básico](https://www.youtube.com/watch?v=YjzXq6U5iQI)",
-        "🔗 [APIs REST com Node.js – Balta.io](https://www.youtube.com/watch?v=qsDvJrGMSUY)",
-        "🐧 [Introdução ao Linux – Bóson Treinamentos](https://www.youtube.com/watch?v=QFgIFKzGH8w)"
-    ]
-    await ctx.send(f"Aqui vai uma aula de **hacking / cibersegurança** pra você estudar hoje, salve o link pois essa mensagem será apagada em 30 segundos!\n{random.choice(aulas_hacking)}", delete_after=30)
+    @commands.command(name="aula_hacking")
+    async def aula_hacking(self, ctx):
+        aulas_hacking = [
+            "🛡️ [Introdução à Cibersegurança – Cisco NetAcad](https://www.netacad.com/pt-br/courses/cybersecurity/introduction-cybersecurity)",
+            "🔒 [Hack The Box Academy (Lab Free)](https://academy.hackthebox.com/)",
+            "🧩 [Criptografia – Bóson Treinamentos](https://www.youtube.com/watch?v=EpLMKrN9UE0)",
+            "🔐 [Power BI para Iniciantes – Hashtag Treinamentos](https://www.youtube.com/watch?v=CMY1dzMo6o)",  # não é hacking puro, mas pode ser mantido
+            "🔧 [Redes TCP/IP para Iniciantes – Curso Gratuito](https://www.youtube.com/watch?v=uyM2ZL5jg88)",
+            "🌐 [Redes de Computadores – Curso Básico](https://www.youtube.com/watch?v=YjzXq6U5iQI)",
+            "🔗 [APIs REST com Node.js – Balta.io](https://www.youtube.com/watch?v=qsDvJrGMSUY)",
+            "🐧 [Introdução ao Linux – Bóson Treinamentos](https://www.youtube.com/watch?v=QFgIFKzGH8w)"
+        ]
+        await ctx.send(f"Aqui vai uma aula de **hacking / cibersegurança** pra você estudar hoje, salve o link pois essa mensagem será apagada em 30 segundos!\n{random.choice(aulas_hacking)}", delete_after=30)
 
 
     @commands.command(name="quiz")
