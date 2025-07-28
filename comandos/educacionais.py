@@ -32,7 +32,7 @@ class Educacionais(commands.Cog):
             "🛡️ [Introdução à Cibersegurança – Cisco NetAcad](https://www.netacad.com/pt-br/courses/cybersecurity/introduction-cybersecurity)",
             "🔒 [Hack The Box Academy (Lab Free)](https://academy.hackthebox.com/)",
             "🧩 [Criptografia – Bóson Treinamentos](https://www.youtube.com/watch?v=EpLMKrN9UE0)",
-            "🔐 [Power BI para Iniciantes – Hashtag Treinamentos](https://www.youtube.com/watch?v=CMY1dzMo6o)",  # não é hacking puro, mas pode ser mantido
+            "🔐 [Power BI para Iniciantes – Hashtag Treinamentos](https://www.youtube.com/watch?v=CMY1dzMo6o)",
             "🔧 [Redes TCP/IP para Iniciantes – Curso Gratuito](https://www.youtube.com/watch?v=uyM2ZL5jg88)",
             "🌐 [Redes de Computadores – Curso Básico](https://www.youtube.com/watch?v=YjzXq6U5iQI)",
             "🔗 [APIs REST com Node.js – Balta.io](https://www.youtube.com/watch?v=qsDvJrGMSUY)",

@@ -19,6 +19,7 @@ EXTENSIONS = [
     "comandos.perfil",
     "comandos.educacionais",
     "tasks.mensagem_periodica",
+    "tasks.noticias_hacker",
     "interface.painel",
     "interface.boas_vindas",
     "interface.voice_logger",
