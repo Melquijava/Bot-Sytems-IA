@@ -28,5 +28,5 @@ class Editor(commands.Cog):
 
         await ctx.send(embed=embed, view=EditorView())
 
-def setup(bot):
-    bot.add_cog(Editor(bot))
+async def setup(bot):
+    await bot.add_cog(Editor(bot))
