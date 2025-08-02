@@ -24,6 +24,7 @@ EXTENSIONS = [
     "interface.boas_vindas",
     "interface.voice_logger",
     "comandos.comandos_extras",
+    "comandos.editor",
     "comandos.ia",
 ]
 

@@ -40,7 +40,8 @@ class PainelInterativoView(discord.ui.View):
             "• `!hacking` – Recomenda canais de hacking ético\n"
             "• `!prompts-ia` – Recomenda canais de IA e prompts\n"
             "• `!aula_programacao` – Aula aleatória de programação\n"
-            "• `!aula_hacking` – Aula aleatória de hacking/cibersegurança",
+            "• `!aula_hacking` – Aula aleatória de hacking/cibersegurança"
+            "• `!editor` – Use esse comando para abrir o editor HTML, CSS e JAVASCRIPT\n",
             ephemeral=True
     )
 
