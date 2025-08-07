@@ -57,7 +57,7 @@ class PainelInterativoView(discord.ui.View):
             1367617789468348627   
         ]
 
-        categoria = discord.utils.get(guild.categories, name="━━━━━━❰･ᴀᴛᴇɴᴅɪᴍᴇɴᴛᴏ･❱━━━━━")
+        categoria = discord.utils.get(guild.categories, name="╭┈┈┈┈ᴀᴛᴇɴᴅɪᴍᴇɴᴛᴏ┈┈┈┈╮")
         if not categoria:
             await interaction.response.send_message("❌ Categoria 'Atendimento' não encontrada.", ephemeral=True)
             return
