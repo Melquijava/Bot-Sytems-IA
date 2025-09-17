@@ -7,16 +7,17 @@ class Mensagem(commands.Cog):
 
     @tasks.loop(hours=12)
     async def enviar_mensagem(self):
-        canal_id = 1360845409454526564 
+        canal_id = 1360845409454526564  
         canal = self.bot.get_channel(canal_id)
 
         if canal:
             mensagem = (
-                "👋 **Seja bem-vindo(a) ao Systems_BSI!**\n\n"
-                "📌 Se você chegou agora, não deixe de se apresentar no canal <#1360818765646008436>!\n"
-                "🔗 Compartilhe seu GitHub e LinkedIn no canal <#1360826916268937412> para fazer networking com a comunidade!\n"
-                "🤖 Use o canal <#1383291276803440711> para explorar os comandos do nosso bot e aproveitar todos os recursos disponíveis.\n\n"
-                "🚀 Estamos felizes em ter você aqui. Bora evoluir junto!"
+                "# **Fique por dentro das novidades do Systems_BSI!**\n\n"
+                "📲 Siga a gente no **Instagram** e acompanhe os conteúdos exclusivos: \n"
+                "[Instagram Oficial](https://instagram.com/systems_bsi)\n\n"
+                "💻 Acesse nosso **site** para conferir projetos, eventos e materiais:\n"
+                "[Nosso Site](https://systemsbsi.com)\n\n"
+                "Junte-se à nossa comunidade em todas as redes e cresça junto com a gente!"
             )
             await canal.send(mensagem)
 

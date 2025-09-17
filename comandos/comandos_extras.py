@@ -9,19 +9,19 @@ class ComandosExtras(commands.Cog):
     async def programacao(self, ctx):
         await ctx.send(
             "💻 **Canais sobre Programação:**\n"
-            "🔹 <#1366547081459929120> – Cursos gratuitos\n"
-            "🔹 <#1367647336062390292> – Dicas e recursos de dev\n"
+            "🔹 <#1409539828537753651> – Cursos gratuitos\n"
+            "🔹 <#1372577665764298822> – Dicas e recursos de dev\n"
             "🔹 <#1360844187637121065> – Compartilhe seus projetos\n",
             delete_after=120
         )
 
-    @commands.command(name="hacking")
+    @commands.command(name="cyber-segurity")
     async def hacking(self, ctx):
         await ctx.send(
-            "🧠 **Canais sobre Hacking Ético:**\n"
-            "🔹 <#1367945980342833234> – Técnicas, ferramentas e desafios\n"
-            "🔹 <#1368067478248361988> – Cursos sobre hacking ético\n"
-            "🔹 <#1372577665764298822> – Laboratórios e simulações\n",
+            "🧠 **Canais sobre Ciber segurança:**\n"
+            "🔹 <#1396295340738482307> – Chat específico para o assunto\n"
+            "🔹 <#1409811288300982272> – Cursos sobre Cyber-security\n"
+            "🔹 <#1367945980342833234> – Laboratórios e simulações\n",
             delete_after=120
         )
 

@@ -26,7 +26,7 @@ class Educacionais(commands.Cog):
         await ctx.send(f"Aqui vai uma aula de **programação** pra você estudar hoje, salve o link pois essa mensagem será apagada em 30 segundos!\n{random.choice(aulas_programacao)}", delete_after=30)
 
 
-    @commands.command(name="aula_hacking")
+    @commands.command(name="aula_cyber")
     async def aula_hacking(self, ctx):
         aulas_hacking = [
             "🛡️ [Introdução à Cibersegurança – Cisco NetAcad](https://www.netacad.com/pt-br/courses/cybersecurity/introduction-cybersecurity)",

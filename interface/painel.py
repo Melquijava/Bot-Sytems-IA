@@ -37,10 +37,10 @@ class PainelInterativoView(discord.ui.View):
             "• `!perfil` – Ver seus links GitHub/LinkedIn\n"
             "• `!setgithub` / `!setlinkedin` – Cadastrar seus links\n"
             "• `!programacao` – Recomenda canais de programação\n"
-            "• `!hacking` – Recomenda canais de hacking ético\n"
+            "• `!cyber-security` – Recomenda canais de Ciber segurança\n"
             "• `!prompts-ia` – Recomenda canais de IA e prompts\n"
             "• `!aula_programacao` – Aula aleatória de programação\n"
-            "• `!aula_hacking` – Aula aleatória de hacking/cibersegurança\n"
+            "• `!aula_cyber` – Aula aleatória de hacking/cibersegurança\n"
             "• `!editor` – Use esse comando para abrir o editor HTML, CSS e JAVASCRIPT\n",
             ephemeral=True
     )
