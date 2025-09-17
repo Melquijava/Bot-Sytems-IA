@@ -17,7 +17,7 @@ class PainelSistemaBSI(commands.Cog):
             color=discord.Color.blurple()
         )
         embed.set_image(url="https://i.imgur.com/7edJCEr.jpeg")
-        embed.set_footer(text="Desenvolvido por Systems_BSI • discord.gg/systems")
+        embed.set_footer(text="Desenvolvido por RA Corporation • discord.gg/systems")
 
         view = PainelInterativoView()
         await ctx.send(embed=embed, view=view)
@@ -35,12 +35,12 @@ class PainelInterativoView(discord.ui.View):
             "• `!dica` – Dica aleatória de tecnologia\n"
             "• `!desafio` – Desafio técnico diário\n"
             "• `!perfil` – Ver seus links GitHub/LinkedIn\n"
-            "• `!setgithub` / `!setlinkedin` – Cadastrar seus links\n"
+            "• `!github` / `!linkedin` – Cadastrar seus links\n"
             "• `!programacao` – Recomenda canais de programação\n"
-            "• `!cyber-security` – Recomenda canais de Ciber segurança\n"
+            "• `!cyber-security` – Recomenda canais de Cibersegurança\n"
             "• `!prompts-ia` – Recomenda canais de IA e prompts\n"
             "• `!aula_programacao` – Aula aleatória de programação\n"
-            "• `!aula_cyber` – Aula aleatória de hacking/cibersegurança\n"
+            "• `!aula_cyber` – Aula aleatória de cibersegurança\n"
             "• `!editor` – Use esse comando para abrir o editor HTML, CSS e JAVASCRIPT\n",
             ephemeral=True
     )

@@ -15,7 +15,7 @@ class ComandosExtras(commands.Cog):
             delete_after=120
         )
 
-    @commands.command(name="cyber-segurity")
+    @commands.command(name="cyber-security")
     async def hacking(self, ctx):
         await ctx.send(
             "🧠 **Canais sobre Ciber segurança:**\n"
