@@ -6,7 +6,7 @@ class EditorView(discord.ui.View):
         super().__init__()
         self.add_item(discord.ui.Button(
             label="Abrir Editor",
-            url="https://editor.systemsbsi.com",  # Substitua pelo link real
+            url="sandboxsystems.up.railway.app",
             style=discord.ButtonStyle.link
         ))
 
