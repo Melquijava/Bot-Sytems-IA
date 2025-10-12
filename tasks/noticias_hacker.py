@@ -5,7 +5,7 @@ import os
 from openai import AsyncOpenAI
 import re 
 
-CANAL_NOTICIAS_ID = 1360845409454526564
+CANAL_NOTICIAS_ID = 1426946302679453726
 
 
 URL_IMAGEM_PINGUSYS = "https://i.imgur.com/CMuTsTf.png"
