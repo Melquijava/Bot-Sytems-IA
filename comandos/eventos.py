@@ -79,7 +79,6 @@ class EventosCog(commands.Cog):
         self.bot.add_view(VistaInscricao())
 
     @commands.command(name="iniciar_inscricoes")
-    @commands.has_permissions(administrator=True)
     async def iniciar_inscricoes(self, ctx):
         """Cria a mensagem de inscrição para o evento de desafios."""
         canal_destino = self.bot.get_channel(CANAL_INSCRICOES_ID)
