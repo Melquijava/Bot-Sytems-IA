@@ -27,6 +27,7 @@ EXTENSIONS = [
     "comandos.editor",
     "comandos.ia",
     "comandos.eventos",
+    "comandos.desafio"
 ]
 
 @bot.event
