@@ -65,6 +65,5 @@ class VoiceLogger(commands.Cog):
                 )
                 await log_channel.send(embed=embed_simples)
 
-# Setup padrão de COG
 async def setup(bot: commands.Bot):
     await bot.add_cog(VoiceLogger(bot))
