@@ -41,6 +41,31 @@ class NoticiasHacker(commands.Cog):
         clean = re.compile('<.*?>')
         return re.sub(clean, '', texto)
 
+    def extrair_imagem_noticia(self, entry):
+        """
+        Tenta extrair a URL da imagem de uma entrada de feed RSS de várias fontes possíveis.
+        """
+        if hasattr(entry, 'media_content') and entry.media_content:
+            for media in entry.media_content:
+                if 'url' in media and 'image' in media.get('medium', ''):
+                    return media['url']
+
+        if hasattr(entry, 'media_thumbnail') and entry.media_thumbnail:
+            return entry.media_thumbnail[0]['url']
+        
+        conteudo = getattr(entry, 'description', getattr(entry, 'summary', ''))
+        if conteudo:
+            match = re.search(r'<img [^>]*src="([^"]+)"', conteudo)
+            if match:
+                return match.group(1)
+        
+        if hasattr(entry, 'enclosures') and entry.enclosures:
+            for enclosure in entry.enclosures:
+                if 'image' in enclosure.get('type', ''):
+                    return enclosure.get('href')
+
+        return None
+
     async def resumir_com_ia(self, titulo, conteudo_bruto):
         conteudo_limpo = self.limpar_html(conteudo_bruto)[:2000]
         
@@ -65,7 +90,7 @@ class NoticiasHacker(commands.Cog):
             print(f"Erro na IA ao resumir notícia: {e}")
             return None
 
-    @tasks.loop(minutes=60)
+    @tasks.loop(minutes=240)
     async def verificar_noticias(self):
         canal = self.bot.get_channel(CANAL_NOTICIAS_ID)
         if not canal:
@@ -83,13 +108,14 @@ class NoticiasHacker(commands.Cog):
                         data_publicacao = datetime.now(timezone.utc)  
                         if hasattr(entry, 'published_parsed') and entry.published_parsed:
                             data_publicacao = datetime(*entry.published_parsed[:6], tzinfo=timezone.utc)
-                        
+
                         novas_noticias.append({
                             'fonte': nome_fonte,
                             'titulo': entry.title,
                             'link': link,
                             'data': data_publicacao,
-                            'conteudo': getattr(entry, 'description', getattr(entry, 'summary', ''))
+                            'conteudo': getattr(entry, 'description', getattr(entry, 'summary', '')),
+                            'entry_original': entry 
                         })
             except Exception as e:
                 print(f"Erro ao processar o feed {nome_fonte}: {e}")
@@ -108,10 +134,14 @@ class NoticiasHacker(commands.Cog):
                 title=f"📰 {noticia_escolhida['titulo']}",
                 url=noticia_escolhida['link'],
                 description=f"**Análise do PinguSys:**\n\n{resumo_pingusys}",
-                color=discord.Color.orange()
+                color=discord.Color.blue() 
             )
             embed.set_thumbnail(url=URL_IMAGEM_PINGUSYS)
             embed.set_footer(text=f"Fonte: {noticia_escolhida['fonte']} • Publicado em: {noticia_escolhida['data'].strftime('%d/%m/%Y às %H:%M')}")
+
+            url_imagem = self.extrair_imagem_noticia(noticia_escolhida['entry_original'])
+            if url_imagem:
+                embed.set_image(url=url_imagem)
 
             await canal.send(embed=embed)
 
